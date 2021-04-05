@@ -1,0 +1,233 @@
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: auto;
+    font-family: open sans, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: block;
+    /* margin: 8px; */
+}
+
+html *,
+html *:after,
+html *:before {
+    box-sizing: inherit;
+}
+
+header#user_top {
+    position: fixed;
+    display: block;
+    background: #f5f6fa;
+    width: 180px;
+    height: 100%;
+    top: 0;
+    padding: 10px 10px;
+    text-align: right;
+}
+
+a {
+    text-decoration: none;
+    color: #e74c3c;
+}
+
+
+.header-top a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    margin: 8px 0;
+    clear: both;
+}
+
+.index .container {
+    max-width: 600px;
+    margin: 0;
+    margin-left: 380px;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.container {
+    max-width: 620px;
+    height: auto;
+    min-height: calc(100% - 260px);
+    margin: 0 auto;
+    padding: 20px;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+.home-list-item {
+    margin-bottom: 14px;
+    font-size: .8em;
+    position: relative;
+}
+
+.home-date-indicator {
+    color: #888;
+    margin-right: 10px;
+}
+
+.home-list-item a {
+    font-size: 1.3em;
+    line-height: 1.3em;
+    margin-top: 15px;
+}
+
+#note {
+    color: tomato;
+    font-size: 1.4em;
+    margin-bottom: 0;
+}
+
+#index {
+    color: black;
+}
+
+.main p {
+    line-height: 180%;
+    font-weight: 300;
+    text-align: justify;
+    margin: 24px 0;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+body .main {
+    font-size: 16px;
+    margin-right: 60px;
+}
+
+
+
+/*Iphone(480 x 640)*/
+@media screen and (min-width: 320px) {
+    header#user_top {
+        position: fixed;
+        display: block;
+        background: #f5f6fa;
+        width: 100px;
+        height: 100%;
+        top: 0;
+        padding: 10px 10px;
+        text-align: right;
+    }
+
+    .index .container {
+        /* max-width: 600px; */
+        margin: 0;
+        margin-left: 90px;
+        font-size: 13px;
+        text-align: justify;
+        margin-right: 5px;
+    }
+}
+
+/*Tablet nhỏ(480 x 640)*/
+@media screen and (min-width: 480px) {
+    header#user_top {
+        position: fixed;
+        display: block;
+        background: #f5f6fa;
+        width: 100px;
+        height: 100%;
+        top: 0;
+        padding: 10px 10px;
+        text-align: right;
+    }
+
+    .index .container {
+        /* max-width: 600px; */
+        margin: 0;
+        margin-left: 100px;
+        font-size: 16px;
+        text-align: justify;
+        /* margin-right: 5px; */
+    }
+}
+
+/*Ipad dọc(768 x 1024)*/
+@media screen and (min-width: 768px) {
+    header#user_top {
+        position: fixed;
+        display: block;
+        background: #f5f6fa;
+        width: 140px;
+        height: 100%;
+        top: 0;
+        padding: 10px 10px;
+        text-align: right;
+    }
+
+    .index .container {
+        /* max-width: 600px; */
+        margin: 0;
+        margin-left: 150px;
+        font-size: 16px;
+        text-align: justify;
+        /* margin-right: 5px; */
+    }
+}
+
+/*Ipad ngang(1024 x 768)*/
+@media screen and (min-width: 1024px) {
+    header#user_top {
+        position: fixed;
+        display: block;
+        background: #f5f6fa;
+        width: 180px;
+        height: 100%;
+        top: 0;
+        padding: 10px 10px;
+        text-align: right;
+    }
+
+    .index .container {
+        /* max-width: 600px; */
+        margin: 0;
+        margin-left: 230px;
+        font-size: 16px;
+        text-align: justify;
+        /* margin-right: 5px; */
+    }
+}
+
+.warn {
+    font-size: 12px;
+    color: #e9948a;
+}
+
+.post-title {
+    font-weight: bold;
+    color: cornflowerblue;
+}
+
+#content h2 {
+    color: rgb(178, 137, 212);
+}
+
+#title {
+    font-size: 12px;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (max-width: 1024px) {} */
+.date {
+    color: brown;
+}
+
+.important-note {
+    font-weight: bolder;
+    color: mediumpurple;
+}

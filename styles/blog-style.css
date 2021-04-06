@@ -231,3 +231,18 @@ body .main {
     font-weight: bolder;
     color: mediumpurple;
 }
+
+.box {
+    background-color: #eee;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    border-radius: 5px;
+}
+
+.box:last-of-type {
+    clear: right;
+}

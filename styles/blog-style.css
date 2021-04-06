@@ -246,3 +246,7 @@ body .main {
 .box:last-of-type {
     clear: right;
 }
+
+.notice {
+    color: violet;
+}

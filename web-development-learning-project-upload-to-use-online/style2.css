@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 200px;
+}
+
+.screen {
+    background-color: black;
+    text-align: right;
+    color: white;
+    font-size: 20px;
+    padding: 15px 10px;
+}
+
+.calc-button-row {
+    display: flex;
+    justify-content: space-between;
+    align-content: stretch;
+    margin-bottom: 0.5%;
+}
+
+.calc-button-item {
+    background-color: grey;
+    padding: 13px 5px;
+    width: 24.5%;
+    border: none;
+    font-size: 20px;
+}
+
+.calc-button-item:last-child {
+    background-color: #df974c;
+}
+
+.half {
+    width: 49.5%;
+}
+
+.three-quarter {
+    width: 74.8%;
+}

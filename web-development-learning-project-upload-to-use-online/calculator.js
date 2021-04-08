@@ -13,6 +13,7 @@ let buffer = "0";
 let tempBuffer = 0;
 let operator;
 let negative = false;
+
 const screen = document.querySelector(".screen");
 
 function buttonClick(value) {
@@ -30,6 +31,7 @@ function handleSymbol(value) {
         case "C":
             total = 0;
             buffer = "0";
+            negative = false;
             tempBuffer = buffer;
             break;
         case "=":
@@ -40,8 +42,10 @@ function handleSymbol(value) {
                 handleMath(operator);
             }
             operator = null;
+            tempBuffer = total;
+            // buffer = "0";
             buffer = total;
-            tempBuffer = buffer;
+            negative = false;
             total = 0;
             break;
         case "+":
@@ -52,26 +56,31 @@ function handleSymbol(value) {
             handleOperator(value);
             break;
         case "←":
-            if (buffer.length === 1) {
+            if (total === 0 && negative === false && operator === null) {
                 buffer = "0";
                 tempBuffer = buffer;
             } else {
-                buffer = buffer.substring(0, buffer.length - 1);
-                tempBuffer = buffer;
+                if (buffer.length === 1) {
+                    buffer = "0";
+                    tempBuffer = buffer;
+                } else {
+                    buffer = buffer.substring(0, buffer.length - 1);
+                    tempBuffer = buffer;
+                }
             }
             break;
     }
 }
 
 function handleNumber(value) {
-    if (buffer === "0" || (total === 0 && operator === null)) {
+    if (buffer === "0") {
+        buffer = value;
+        tempBuffer = buffer;
+    } else if (buffer === "0" && total === 0 && operator === null) {
         if (negative === true) {
             buffer = -value;
             tempBuffer = buffer;
             negative = false;
-        } else {
-            buffer = value;
-            tempBuffer = buffer;
         }
     } else {
         buffer += value;

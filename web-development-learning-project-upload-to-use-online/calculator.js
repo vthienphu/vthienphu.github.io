@@ -74,14 +74,16 @@ function handleSymbol(value) {
 
 function handleNumber(value) {
     if (buffer === "0") {
-        buffer = value;
-        tempBuffer = buffer;
-    } else if (buffer === "0" && total === 0 && operator === null) {
         if (negative === true) {
+            console.log("fai vo day chu");
             buffer = -value;
             tempBuffer = buffer;
             negative = false;
+        } else {
+            buffer = value;
+            tempBuffer = buffer;
         }
+
     } else {
         buffer += value;
         tempBuffer = buffer;
